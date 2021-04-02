@@ -1,0 +1,572 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ToolkitForms</name>
+    </assembly>
+    <members>
+        <member name="T:ToolkitForms.InputFormValidateDelegate">
+            <summary>
+            校验InputForm的用户输入值
+            </summary>
+            <param name="text">用户输入的文字</param>
+            <returns>校验通过返回true，否则返回false</returns>
+        </member>
+        <member name="T:ToolkitForms.InputForm">
+            <summary>
+            输入对话框
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.InputForm.Value">
+            <summary>
+            初始值/用户输入值
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.InputForm.AutoTrim">
+            <summary>
+            是否自动去除两端空格，默认为true
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.InputForm.Regex">
+            <summary>
+            用以校验输入值的正则，优先于Validator被执行
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.InputForm.Validator">
+            <summary>
+            自定义校验委托，后于Regex被执行
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.InputForm.Title">
+            <summary>
+            窗体标题，默认为已本地化的"Input"
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.InputForm.Message">
+            <summary>
+            窗体提示，默认为已本地化的"Please type a value"
+            </summary>
+        </member>
+        <member name="M:ToolkitForms.InputForm.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ToolkitForms.InputForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ToolkitForms.InputForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ToolkitForms.InputFormCommonRules">
+            <summary>
+            常用输入校验正则集合
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputFormCommonRules.Alphabet">
+            <summary>
+            校验规则：英文字母
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputFormCommonRules.Digits">
+            <summary>
+            校验规则：数字0-9
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputFormCommonRules.AlphabetDigits">
+            <summary>
+            校验规则：英文字母和数字
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputFormCommonRules.Int">
+            <summary>
+            校验规则：整数
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputFormCommonRules.UInt">
+            <summary>
+            校验规则：非负整数
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputFormCommonRules.Float">
+            <summary>
+            校验规则：浮点数
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputFormCommonRules.UFloat">
+            <summary>
+            校验规则：非负浮点数
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputFormCommonRules.Email">
+            <summary>
+            校验规则：Email地址
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.InputFormCommonRules.IP">
+            <summary>
+            校验规则：IP地址
+            </summary>
+        </member>
+        <member name="T:ToolkitForms.Localization">
+            <summary>
+            本地化字符串类
+            </summary>
+        </member>
+        <member name="M:ToolkitForms.Localization.Get(System.String)">
+            <summary>
+            根据操作系统语种获取字符串的本地化值
+            </summary>
+            <param name="key">字符串</param>
+            <returns>获取成功返回本地化字符串，否则返回原字符串</returns>
+        </member>
+        <member name="T:ToolkitForms.LoginFormAuthDelegate">
+            <summary>
+            LoginForm登录验证委托
+            </summary>
+            <param name="userName">用户名</param>
+            <param name="password">密码</param>
+            <returns>验证通过返回true，失败返回false</returns>
+        </member>
+        <member name="T:ToolkitForms.LoginForm">
+            <summary>
+            登录框体
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.LoginForm.Title">
+            <summary>
+            窗体标题，默认为已本地化的"User Login"
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.LoginForm.UserNameLabel">
+            <summary>
+            用户名标签文字
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.LoginForm.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.LoginForm.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.LoginForm.Authenticator">
+            <summary>
+            登录验证委托
+            </summary>
+        </member>
+        <member name="M:ToolkitForms.LoginForm.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.LoginForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ToolkitForms.LoginForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ToolkitForms.LoginForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ToolkitForms.SelectForm">
+            <summary>
+            选择输入框
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.SelectForm.Options">
+            <summary>
+            选项列表
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.SelectForm.SelectedIndex">
+            <summary>
+            初始选中项/用户选中项的index，默认为-1
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.SelectForm.SelectedValue">
+            <summary>
+            用户选择的选项的字符串值
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.SelectForm.Title">
+            <summary>
+            窗体标题，默认为已本地化的"Select"
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.SelectForm.Message">
+            <summary>
+            窗体提示，默认为已本地化的"Please select an option"
+            </summary>
+        </member>
+        <member name="M:ToolkitForms.SelectForm.#ctor">
+            <summary>
+            默认构造函数
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.SelectForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ToolkitForms.SelectForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ToolkitForms.SelectForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ToolkitForms.TaskForm">
+            <summary>
+            任务线程窗体
+            </summary>
+        </member>
+        <member name="T:ToolkitForms.TaskForm.TaskResults">
+            <summary>
+            任务运行结果
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.TaskForm.TaskResults.None">
+            <summary>
+            任务尚未开始
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.TaskForm.TaskResults.Running">
+            <summary>
+            任务运行中
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.TaskForm.TaskResults.Success">
+            <summary>
+            任务成功结束
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.TaskForm.TaskResults.Aborted">
+            <summary>
+            用户取消了任务
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.TaskForm.TaskResults.TimedOut">
+            <summary>
+            任务因超时而被迫终止
+            </summary>
+        </member>
+        <member name="F:ToolkitForms.TaskForm.TaskResults.Error">
+            <summary>
+            任务因出现异常而终止
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.TaskForm.TaskProc">
+            <summary>
+            线程工作函数（无参），如果非null则优先运行
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.TaskForm.ParameterTaskProc">
+            <summary>
+            线程工作函数（带参），只有当TaskProc为null时才会运行
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.TaskForm.Parameter">
+            <summary>
+            ParameterThreadProc的参数
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.TaskForm.Title">
+            <summary>
+            窗体标题，默认为已本地化的"Please Wait"
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.TaskForm.Message">
+            <summary>
+            窗体文字，默认为已本地化的"Processing data..."
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.TaskForm.AllowAbort">
+            <summary>
+            是否允许用户中止任务，为true则显示Abort按钮，默认为true
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.TaskForm.TimeLimit">
+            <summary>
+            限制任务最大运行时间（毫秒），超过则强制中止，0表示无限制，默认为0
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.TaskForm.TaskResult">
+            <summary>
+            任务运行结果
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.TaskForm.Error">
+            <summary>
+            线程运行中发生的错误信息
+            </summary>
+        </member>
+        <member name="M:ToolkitForms.TaskForm.#ctor">
+             <summary>
+            默认 构造函数
+             </summary>
+        </member>
+        <member name="F:ToolkitForms.TaskForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:ToolkitForms.TaskForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:ToolkitForms.TaskForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:ToolkitForms.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.Properties.Resources.Cancel">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:ToolkitForms.Properties.Resources.OK">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:MessageForm">
+            <summary>
+            解决MessageBox无法居中显示于父窗体的缺陷
+            </summary>
+        </member>
+        <member name="M:MessageForm.Show(System.String)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="text">消息文字</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.String,System.String)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <param name="buttons">按钮组合</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <param name="buttons">按钮组合</param>
+            <param name="icon">主题图标</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <param name="buttons">按钮组合</param>
+            <param name="icon">主题图标</param>
+            <param name="defButton">默认按钮</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <param name="buttons">按钮组合</param>
+            <param name="icon">主题图标</param>
+            <param name="defButton">默认按钮</param>
+            <param name="options">显示选项</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.Windows.Forms.IWin32Window,System.String)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.Windows.Forms.IWin32Window,System.String,System.String)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <param name="buttons">按钮组合</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <param name="buttons">按钮组合</param>
+            <param name="icon">主题图标</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <param name="buttons">按钮组合</param>
+            <param name="icon">主题图标</param>
+            <param name="defButton">默认按钮</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Show(System.Windows.Forms.IWin32Window,System.String,System.String,System.Windows.Forms.MessageBoxButtons,System.Windows.Forms.MessageBoxIcon,System.Windows.Forms.MessageBoxDefaultButton,System.Windows.Forms.MessageBoxOptions)">
+            <summary>
+            显示消息框
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题</param>
+            <param name="buttons">按钮组合</param>
+            <param name="icon">主题图标</param>
+            <param name="defButton">默认按钮</param>
+            <param name="options">显示选项</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.None(System.String,System.String)">
+            <summary>
+            提示框: 无图标
+            </summary>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题，如果为null则使用ProductName</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.None(System.Windows.Forms.IWin32Window,System.String,System.String)">
+            <summary>
+            提示框: 无图标
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题，如果为null则使用ProductName</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Info(System.String,System.String)">
+            <summary>
+            提示框: 蓝色i图标
+            </summary>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题，如果为null则使用ProductName</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Info(System.Windows.Forms.IWin32Window,System.String,System.String)">
+            <summary>
+            提示框: 蓝色i图标
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题，如果为null则使用ProductName</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Warning(System.String,System.String)">
+            <summary>
+            提示框: 黄色感叹号图标
+            </summary>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题，如果为null则使用ProductName</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Warning(System.Windows.Forms.IWin32Window,System.String,System.String)">
+            <summary>
+            提示框: 黄色感叹号图标
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题，如果为null则使用ProductName</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Error(System.String,System.String)">
+            <summary>
+            提示框: 红底白叉图标
+            </summary>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题，如果为null则使用ProductName</param>
+            <returns>用户选择结果</returns>
+        </member>
+        <member name="M:MessageForm.Error(System.Windows.Forms.IWin32Window,System.String,System.String)">
+            <summary>
+            提示框: 红底白叉图标
+            </summary>
+            <param name="owner">要居中显示于的父窗体</param>
+            <param name="text">消息文字</param>
+            <param name="caption">窗体标题，如果为null则使用ProductName</param>
+            <returns>用户选择结果</returns>
+        </member>
+    </members>
+</doc>
